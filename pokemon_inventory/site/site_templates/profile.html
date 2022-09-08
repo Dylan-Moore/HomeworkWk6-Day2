@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- <header class="hero-section"> -->
+    <!-- <h3 class="header-text text-warning">Welcome to Pokemon-Inv!, {{current_user.username}}!</h3> -->
+<!-- </header> -->
+
+<div class="container" id = "profile-details">
+    <h3 class="col-5"> Welcome {{ current_user.username }} Here are you profile details!</h3>
+    <ul class="list-group col-5">
+        <li class="list-group-item">username: <img src="../../static/Images/Volcarona.jpg" style="height:50px; border-radius: 50%; border: 10px solid #FEDE00" alt="">{{ current_user.username }}</li>
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
+        <li class="list-group-item">Profile Created: {{ current_user.date_created }}</li>
+    </ul>
+</div>
+
+{% endblock content %}
